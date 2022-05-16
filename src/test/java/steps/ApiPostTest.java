@@ -27,13 +27,13 @@ public class ApiPostTest {
 	}
 
 	@Quando("operacao vazia")
-	public void operacao_vazia() {
+	public void operacao_Vazia() {
 		apipost.bodyResponsePix(null);
 	}
 
 	@Entao("valido status code insucesso {int}")
 	public void valido_status_code_insucesso(Integer int1) {
-		apipost.statuscodeOperacaovazia();
+		apipost.statuscodeOperacaoVazia();
 
 
 	}

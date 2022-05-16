@@ -14,7 +14,7 @@ public class ApiPost {
 
 	public Response acessarApi(String uri) {
 
-		return response = RestAssured.post(uri);
+			return response = RestAssured.post(uri);
 
 	}
 
@@ -38,7 +38,7 @@ public class ApiPost {
 		request.body(json.toJSONString());
 	}
 
-	public void statuscodeOperacaovazia() {
+	public void statuscodeOperacaoVazia() {
 
 		int statuscode = response.getStatusCode();
 		assertEquals(400, statuscode);
