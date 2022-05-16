@@ -1,17 +1,18 @@
-#language: pt
+#language:pt
 #Author: renata.zanin@gmail.com
 
-Funcionalidade: Realizar deposito e conta ativa
-  Como usuario quero verificar comportamento de funcionalidade via Api
-
-
-  Contexto: Acessar api
-  Quando acessar api
+@executa
+Funcionalidade: validar operacao 
+ Eu como usuario quero validar operacao para envio api
+ 
+ Contexto: acessar api post
+ 	Dado acessar api 
+ 
+  Cenario: Validar status code
+  Quando escolho operacao pix
+  Entao valido status sucesso 200
   
-  Cenario: validar status code 
-  Dado conta invalida
-  Entao valido status code de retorno 400
-  
-  Cenario: validar status code
-  Dado operacao preenchida Pix
-  Entao valido o nome "Pix"
+  Cenario: Validar status code
+  Quando operacao vazia
+  Entao valido status code insucesso 400
+    
